@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="index.html">
+    <link rel="icon" href="faviconfinal.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="faviconfinal.jpg" type="image/x-icon">
+    <style>
+        /* CSS for header */
+        header {
+            text-align: left; /* Align text to the left */
+            padding: 10px;
+            height: 100px; /* Increased height for navigation buttons */
+            background-color: #090808;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition effect */
+        }
+
+        /* CSS for logo */
+        .logo {
+            float: left;
+            margin-left: 20px;
+            height: 60px;
+            width: auto;
+        }
+
+        /* CSS for navigation buttons */
+        .navigation {
+            float: right; /* Align to the right */
+            margin-right: 20px;
+            margin-top: 30px; /* Adjust vertical alignment */
+        }
+
+        /* CSS for navigation links */
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px; /* Add spacing between buttons */
+            font-size: 16px; /* Set font size */
+            font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+            transition: color 0.3s; /* Add smooth transition effect */
+        }
+
+        /* CSS for hover effect on navigation links */
+        .navigation a:hover {
+            color: #ddd; /* Change text color on hover */
+        }
+
+        /* CSS for box container */
+        .box-container {
+            margin-top: 10em; /* Adjusted vertical distance away from header */
+            width: 60%; /* Occupy a maximum of 60% of the screen width */
+            float: left; /* Align to the left */
+        }
+
+        /* CSS for box styling */
+        .box {
+            width: 400px; /* Set fixed width for the boxes */
+            height: 522px;
+            border: none; /* Remove borders */
+            margin: 10px;
+            display: inline-block;
+            box-sizing: border-box;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition effect */
+            overflow: hidden; /* Hide overflow for zoom effect */
+        }
+
+        /* CSS for image styling */
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease; /* Add smooth transition effect for zoom */
+        }
+
+        /* CSS for hover effect on box */
+        .box:hover img {
+            transform: scale(1.1); /* Increase size on hover */
+        }
+
+        /* CSS for content on the right side */
+        .content {
+            width: 40%; /* Occupy 40% of the screen width */
+            float: right; /* Align to the right */
+            margin-top: 80px; /* Push the content below the header */
+            padding: 20px;
+        }
+
+        /* CSS for hidden header */
+        .hide-header {
+            transform: translateY(-100%); /* Slide up the header */
+        }
+
+        /* CSS for Zeus Tee heading */
+        .zeus-heading {
+            position: absolute;
+            top: 145px; /* Adjust as needed */
+            left: calc(50% + 120px); /* Position beside box 2 with some space */
+            font-size: 16px; /* Adjust font size as needed */
+            font-weight: bolder; /* Make the heading bold */
+            font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+        }
+        .side-text{
+            position: absolute;
+            top: 180px; /* Adjust as needed */
+            left: calc(50% + 120px); /* Position beside box 2 with some space */
+            font-size: 20px; /* Adjust font size as needed */
+            font-weight:lighter; /* Make the heading bold */
+            font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+        }
+
+        /* CSS for line */
+        .line {
+            position: absolute;
+            top: 250px; /* Adjust as needed */
+            left: calc(50% + 120px); /* Position below the text */
+            width: 15cm; /* Adjust line width as needed */
+            border-bottom: 1px solid black; /* Add bottom border */
+        }
+
+        /* CSS for price */
+        .price {
+            position: absolute;
+            top: 270px; /* Adjust as needed */
+            left: calc(50% + 120px); /* Position below the line */
+            font-size: 22px; /* Adjust font size as needed */
+            font-weight: bolder; /* Make the price bold */
+            font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+        }
+        .discount{
+              font-weight: lighter;
+              margin-left: 5px;
+              font-size: 18px;
+        }
+        .sale{
+            color: orange;
+        }
+
+        /* CSS for select size */
+        .select-size {
+            position: absolute;
+            top: 320px; /* Adjust as needed */
+            left: calc(50% + 120px); /* Position below the price */
+            font-size: 18px; /* Adjust font size as needed */
+            font-weight: bold; /* Make the select size heading bold */
+            font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+        }
+
+        /* CSS for size buttons container */
+        .size-buttons {
+            position: absolute;
+            top: 355px; /* Adjust as needed */
+            left: calc(50% + 120px); /* Position below the select size heading */
+            display: flex; /* Use flexbox for layout */
+        }
+
+        /* CSS for size button */
+        .size-button {
+            width: 50px; /* Set width of the button */
+            height: 50px; /* Set height of the button */
+            margin-right: 20px; /* Add spacing between buttons */
+            background-color: #ccc; /* Set background color */
+            text-align: center; /* Center align text */
+            line-height: 50px; /* Center align text vertically */
+            font-size: 22px; /* Adjust font size */
+            font-weight: bold; /* Make the text bold */
+            font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+            border-radius: 50%; /* Make the button round */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Add smooth transition effect */
+        }
+
+        /* CSS for hover effect on size button */
+        .size-button:hover {
+            background-color: black; /* Change background color on hover */
+            color: white; /* Change text color on hover */
+            transform: scale(1.1); /* Increase size on hover */
+        }
+
+        /* CSS for Buy Now button */
+        .buy-now {
+            position: absolute;
+            top: 450px; /* Adjust as needed */
+            left: calc(50% + 120px); /* Position below the size buttons */
+            background-color: #0b0909; /* Set background color */
+            color: rgb(235, 231, 231); /* Set text color */
+            font-size: 32px; /* Set font size */
+            font-weight: bold; /* Make the text bold */
+            padding: 10px 20px; /* Add padding */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Add border radius */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Add smooth transition effect */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+        }
+
+        /* CSS for hover effect on Buy Now button */
+        .buy-now:hover {
+            background-color: rgb(215, 26, 5); /* Change background color on hover */
+            color: white; /* Change text color on hover */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header id="header">
+    <img src="LOGO-white.png" alt="Logo" class="logo">
+    <div class="navigation">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+    </div>
+</header>
+
+<!-- Zeus Tee Heading -->
+<div class="zeus-heading">
+    <h2>Hades Tee</h2>
+</div>
+<p class="side-text">260 GSM 100% French Terry Cotton Oversized T-Shirt</p>
+
+<!-- Line -->
+<div class="line"></div>
+
+<!-- Price -->
+<div class="price">₹1499 <del class="discount">MRP ₹1799</del></div>
+
+<!-- Select Size -->
+<div class="select-size">SELECT SIZE</div>
+
+<!-- Size Buttons -->
+<div class="size-buttons">
+    <div class="size-button">S</div>
+    <div class="size-button">M</div>
+    <div class="size-button">L</div>
+    <div class="size-button">XL</div>
+    <div class="size-button">XXL</div>
+</div>
+
+<!-- Buy Now Button -->
+<a href="https://www.instagram.com/direct/t/17848754913179035/" target="_blank" class="buy-now">Checkout</a>
+
+
+<!-- Box Container -->
+<div class="box-container">
+    <!-- Row 1 -->
+    <div class="box">
+        <!-- Insert your image here -->
+        <img src="Hades back design.png" alt="Image 1">
+    </div>
+    <div class="box">
+        <!-- Insert your image here -->
+        <img src="Hades_front_design-removebg-preview.png" alt="Image 2">
+    </div>
+    <div class="box">
+        <!-- Insert your image here -->
+        <img src="Hades-logo.png" alt="Image 3">
+    </div>
+
+    <!-- Row 2 -->
+    <div class="box">
+        <!-- Insert your image here -->
+        <img src="Size Chart.jpg" alt="Image 4">
+    </div>
+   
+</div>
+
+<!-- Content on the right side -->
+<div class="content">
+    <!-- Insert your content here -->
+</div>
+
+<script>
+    // JavaScript to hide/show header on scroll
+    let lastScrollTop = 0;
+    const header = document.getElementById('header');
+
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Scroll down
+            header.classList.add('hide-header');
+        } else {
+            // Scroll up
+            header.classList.remove('hide-header');
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+</script>
+
+</body>
+</html>
