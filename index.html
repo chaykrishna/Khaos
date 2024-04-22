@@ -18,8 +18,7 @@
     <link rel="stylesheet" href="index quarey.css">
     <link rel="stylesheet" href="all.min.css">
     <link rel="icon" href="faviconfinal.jpg" type="image/x-icon">
-<link rel="shortcut icon" href="faviconfinal.jpg" type="image/x-icon">
-
+    <link rel="shortcut icon" href="faviconfinal.jpg" type="image/x-icon">
 
     <title>Home</title>
 
@@ -58,6 +57,119 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
+        /* Media Query for Mobile Devices */
+        @media screen and (max-width: 768px) {
+            /* Adjustments for mobile view */
+            .header {
+                height: auto;
+            }
+            .header .container {
+                padding: 20px;
+            }
+            .header .main-box {
+                flex-direction: column;
+            }
+            .header .main-box .box-holder {
+                margin-top: 20px;
+            }
+            .header .text {
+                text-align: center;
+                margin-top: 20px;
+            }
+            .nav .nav-box {
+                padding: 20px;
+            }
+            .nav .nav-box .box-holder {
+                flex-direction: column;
+            }
+            .nav .nav-box .box-holder .box-one,
+            .nav .nav-box .box-holder .box-two {
+                width: 100%;
+            }
+            .nav .nav-box .box-holder .box-two .nav-content ul li {
+                padding: 10px 0;
+            }
+            .nav .nav-box .box-holder .box-two .nav-content ul li a {
+                padding: 5px 0;
+            }
+            .nav .nav-box .box-holder .box-two .nav-content ul li a:hover {
+                color: #000;
+            }
+            .inter .container .text-box .content .text {
+                text-align: center;
+            }
+            .best-selling .container .box-holder .box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .best-selling .container .box-holder .box .box-content {
+                padding: 20px;
+            }
+            .best-selling .container .box-holder .box .box-content img {
+                max-width: 100%;
+                height: auto;
+            }
+            .our-products .our-products-content .text {
+                text-align: center;
+            }
+            .our-products .our-products-imgs .box-holder .box {
+                width: 100%;
+            }
+            .our-products .our-products-imgs .box-holder .box .text {
+                text-align: center;
+            }
+            .delivery .container .box-holder .box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .delivery .container .box-holder .box img {
+                width: 50px;
+                margin: 0 auto 10px;
+            }
+            .delivery .container .box-holder .box h3 {
+                text-align: center;
+            }
+            .delivery .container .box-holder .box p {
+                text-align: center;
+            }
+            .instagram .container .box-holder .box {
+                text-align: center;
+            }
+            .instagram .container .box-holder .box h2 {
+                margin-bottom: 10px;
+            }
+            .instagram .container .box-holder .images {
+                justify-content: center;
+            }
+            .instagram .container .box-holder .images img {
+                margin: 0 5px;
+            }
+            .footer .container .box-holder .image {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .footer .container .box-holder .image-text {
+                text-align: center;
+            }
+            .footer .container .box-holder .image-text p {
+                margin-top: 10px;
+            }
+            .footer .container .box-holder .box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .footer .container .box-holder .box ul {
+                padding: 0;
+            }
+            .footer .container .box-holder .box ul li {
+                list-style: none;
+                margin-bottom: 5px;
+            }
+            .footer .container .payment {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -72,7 +184,6 @@
     </div>
 </div>
 
-
 <div class="header">
     <div class="container">
         <div class="main-box">
@@ -81,13 +192,12 @@
                     <img src="LOGO-white.png" alt="logo" border="0">
                 </div>
                 <div class="apear" id="manu">
-                    <img src="menu lol.jpg"> 
+                    <img src="menu lol.jpg">
                 </div>
             </div>
             <div class="text">
                 <h1>Wear Khaos, Embrace the Chaos</h1>
                 <span>Wrap yourself in elegance with our handcrafted attire, where every thread tells a story, blending myth and modernity for timeless style.</span>
-                
             </div>
         </div>
     </div>
@@ -101,7 +211,7 @@
                     <div class="box-one">
                         <div class="icon">
                             <p>Close</p>
-                            <i class="fa-duotone fa-x"></i>                              
+                            <i class="fa-duotone fa-x"></i>
                         </div>
                         <div class="contact">
                             <div class="text-one">
@@ -114,8 +224,7 @@
                                 </div>
                             </div>
                             <div class="icon-contact">
-                                <a href="https://www.instagram.com/khaosclothingcompany/"> <img src="insta.png">    </a>
-                                
+                                <a href="https://www.instagram.com/khaosclothingcompany/"><img src="insta.png"></a>
                             </div>
                         </div>
                     </div>
@@ -147,7 +256,7 @@
                 <div class="text">
                     <h1>Welcome to KHAOS </h1>
                     <h4>Proudly sharing our passion through every handcrafted design.</h4>
-                </div> 
+                </div>
             </div>
         </div>
     </div>
@@ -163,7 +272,7 @@
             <!-- Best selling products content goes here -->
             <div class="box">
                 <div class="box-content">
-                    <img src="Zeus back design.png" alt="">
+                    <img src="Zeus back design.png" alt="" style="max-width: 100%; height: auto;">
                     <div class="text">
                         <h3>Zeus Unisex Oversized Tee</h3>
                     </div>
@@ -171,10 +280,10 @@
                         <p class="discounted-price">Rs. 1499</p>
                         <p class="original-price">Rs.1799</p>
                     </div>
-                    
+
                 </div>
                 <div class="box-content">
-                    <img src="Hades back design.png" alt="">
+                    <img src="Hades back design.png" alt="" style="max-width: 100%; height: auto;">
                     <div class="text">
                         <h3>Hades Unisex Oversized Tee</h3>
                     </div>
@@ -182,10 +291,10 @@
                         <p class="discounted-price">Rs. 1499</p>
                         <p class="original-price">Rs.1799</p>
                     </div>
-                    
+
                 </div>
                 <div class="box-content">
-                    <img src="Poseidon_back_design-removebg-preview.png" alt="">
+                    <img src="Poseidon_back_design-removebg-preview.png" alt="" style="max-width: 100%; height: auto;">
                     <div class="text">
                         <h3>Poseidon Unisex Oversized Tee</h3>
                     </div>
@@ -193,7 +302,7 @@
                         <p class="discounted-price">Rs. 1499</p>
                         <p class="original-price">Rs.1799</p>
                     </div>
-                   
+
                 </div>
             </div>
         </div>
@@ -211,7 +320,7 @@
     <div class="our-products-imgs">
         <div class="box-holder">
             <div class="box">
-                <img src="Products-banner.jpg" alt="">
+                <img src="Products-banner.jpg" alt="" style="max-width: 100%; height: auto;">
                 <div class="text">
                     <h2>Products</h2>
                     <p>All our Greek drops here in one place</p>
@@ -221,32 +330,32 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 </div>
 
 <div class="delivery">
     <div class="container">
         <div class="box-holder">
             <div class="box">
-                <img src="protection (1).png" alt="">
+                <img src="protection (1).png" alt="" style="max-width: 100%; height: auto;">
                 <h3>Free Shipping</h3>
                 <p></p>
             </div>
 
             <div class="box">
-                <img src="present-box (1).png" alt="">
+                <img src="present-box (1).png" alt="" style="max-width: 100%; height: auto;">
                 <h3>Customizable Designs</h3>
                 <p>Choose your design, we'll make it for you.</p>
             </div>
 
             <div class="box">
-                <img src="diamond (1).png" alt="">
+                <img src="diamond (1).png" alt="" style="max-width: 100%; height: auto;">
                 <h3>Premium design</h3>
                 <p>Premium and unique products only here at <span>KHAOS store</span></p>
             </div>
 
             <div class="box">
-                <img src="credit-card (1).png" alt="">
+                <img src="credit-card (1).png" alt="" style="max-width: 100%; height: auto;">
                 <h3>Online payment</h3>
                 <p>via Instagram DM  </p>
             </div>
@@ -278,7 +387,7 @@
         <div class="box-holder">
             <div class="image">
                 <div class="image-text">
-                <a href="index.html"><img src="LOGO-white.png" alt=""></a>
+                    <a href="index.html"><img src="LOGO-white.png" alt=""></a>
                     <p>We have unique clothing for those who appreciate proven quality and exquisite style</p>
                 </div>
             </div>
@@ -308,13 +417,10 @@
         <div class="payment">
             <a href="https://www.instagram.com/khaosclothingcompany" target="_blank">
                 <img src="payment-removebg-preview.png" alt="Khaos Clothing Company Instagram Chat">
-              </a>
-              
+            </a>
         </div>
     </div>
 </div>
-
-
 
 <script src="index.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
